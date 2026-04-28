@@ -24,56 +24,52 @@
    }
  }
 
-
-/.    bubblesort(rate.skor[], n);
-   if (rate.skor[0] == rate.skor[1]){
-      bubblesort(rate.id[], n); ./
-
+struct rate{
+    char shift[5];
+    int skor;
+    int id;
+    char nama[10];
+    };
     
- int main(void) {
-   struct rating{
-      char shift[5];
-      int skor;
-      int id;
-      char nama[10];
-    }
-   int n;
+int main(void) {
+    int n;
+    struct rate rating[100];
    scanf("%d", n);
-   for (int i = 0; i<n, i++){
-      scanf("%s", rate.nama);
-      scanf("%d", rate.id);
-      scanf("%s", rate.shift);
-      scanf("%d", rate.skor);
+   for (int i = 0; i<n; i++){
+      scanf("%s", rating.nama);
+      scanf("%d", rating.id);
+      scanf("%s", rating.shift);
+      scanf("%d", rating.skor);
     }
    
-   if (rate.shift == "PAGI"){
+   if (rating.shift == "PAGI"){
         struct rating pagi[20];
-        bubblesort(rate.skor[], n);
-        if (rate.skor[0] == rate.skor[1]){
-            bubblesort(rate.id[], n);
+        bubblesort(rating.skor, n);
+        if (rating.skor[0] == rating.skor[1]){
+            bubblesort(rating.id, n);
         }
-        pagi[0] = rating[0]
+        pagi[0] = rating[0];
     }
-    if (rate.shift == "SIANG"){
+    if (rating.shift == "SIANG"){
         struct rating siang[20];
-        bubblesort(rate.skor[], n);
-        if (rate.skor[0] == rate.skor[1]){
-            bubblesort(rate.id[], n);
+        bubblesort(rating.skor, n);
+        if (rating.skor[0] == rating.skor[1]){
+            bubblesort(rating.id, n);
         }
-        siang[0] = rating[0]
+        siang[0] = rating[0];
     }
-    if (rate.shift == "MALAM"){
+    if (rating.shift == "MALAM"){
         struct rating malam[20];
-        bubblesort(rate.skor[], n);
-        if (rate.skor[0] == rate.skor[1]){
-            bubblesort(rate.id[], n);
+        bubblesort(rating.skor, n);
+        if (rating.skor[0] == rating.skor[1]){
+            bubblesort(rating.id, n);
         }
-        pagi[0] = rating[0]
+        pagi[0] = rating[0];
     }
     
-    printf("PAGI %s %d %d\n", pagi.nama pagi.id pagi.skor);
-    printf("SIANG %s %d %d\n", siang.nama siang.id siang.skor);
-    printf("MALAM %s %d %d\n", malam.nama malam.id malam.skor);
+    printf("PAGI %s %d %d\n", pagi.nama, pagi.id, pagi.skor);
+    printf("SIANG %s %d %d\n", siang.nama, siang.id, siang.skor);
+    printf("MALAM %s %d %d\n", malam.nama, malam.id, malam.skor);
    return 0;
  }
  
