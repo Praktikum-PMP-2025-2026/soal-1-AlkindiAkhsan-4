@@ -3,7 +3,7 @@
  *   Hari dan Tanggal    : Selasa, 28/04/2026
  *   Nama (NIM)          : Alkindi Bintang Akhsan (13224022)
  *   Nama File           : soal1.c
- *   Deskripsi           : 
+ *   Deskripsi           : Sebuah kubah pengaman dijaga oleh petugas dalam tiga shift berbeda. tampillan penjaga terbaik untuk tiap shift
  * 
  */
 
@@ -23,15 +23,20 @@
       }
    }
  }
-  
+
+
+/.    bubblesort(rate.skor[], n);
+   if (rate.skor[0] == rate.skor[1]){
+      bubblesort(rate.id[], n); ./
+
+    
  int main(void) {
    struct rating{
       char shift[5];
       int skor;
       int id;
       char nama[10];
-   }
-   struct rating rate;
+    }
    int n;
    scanf("%d", n);
    for (int i = 0; i<n, i++){
@@ -39,14 +44,36 @@
       scanf("%d", rate.id);
       scanf("%s", rate.shift);
       scanf("%d", rate.skor);
-   }
-   bubblesort(rate.skor[], n);
-   if (rate.skor[0] == rate.skor[1]){
-      bubblesort(rate.id[], n);
-   }
+    }
+   
    if (rate.shift == "PAGI"){
-      printf("PAGI %s %d %d", rate.nama[0] rate.skor[0] rate.id[0]);
-   }
+        struct rating pagi[20];
+        bubblesort(rate.skor[], n);
+        if (rate.skor[0] == rate.skor[1]){
+            bubblesort(rate.id[], n);
+        }
+        pagi[0] = rating[0]
+    }
+    if (rate.shift == "SIANG"){
+        struct rating siang[20];
+        bubblesort(rate.skor[], n);
+        if (rate.skor[0] == rate.skor[1]){
+            bubblesort(rate.id[], n);
+        }
+        siang[0] = rating[0]
+    }
+    if (rate.shift == "MALAM"){
+        struct rating malam[20];
+        bubblesort(rate.skor[], n);
+        if (rate.skor[0] == rate.skor[1]){
+            bubblesort(rate.id[], n);
+        }
+        pagi[0] = rating[0]
+    }
+    
+    printf("PAGI %s %d %d\n", pagi.nama pagi.id pagi.skor);
+    printf("SIANG %s %d %d\n", siang.nama siang.id siang.skor);
+    printf("MALAM %s %d %d\n", malam.nama malam.id malam.skor);
    return 0;
  }
  
